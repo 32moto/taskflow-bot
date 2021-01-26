@@ -105,15 +105,15 @@ func main() {
 			if event.Type == linebot.EventTypeMessage {
 				switch message := event.Message.(type) {
 				case *linebot.TextMessage:
-				  if message.Text == "check" {
-            ids := "【check ids】\n"
-            ids += " UserId ----------\n" + event.Source.UserID + "\n\n"
-            ids += " GroupId ----------\n" + event.Source.GroupID + "\n\n"
-            ids += " RoomId ----------\n" + event.Source.RoomID
+					if message.Text == "check" {
+						ids := "【check ids】\n"
+						ids += " UserId ----------\n" + event.Source.UserID + "\n\n"
+						ids += " GroupId ----------\n" + event.Source.GroupID + "\n\n"
+						ids += " RoomId ----------\n" + event.Source.RoomID
 
-            if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(ids)).Do(); err != nil {
-              log.Print(err)
-            }
+						if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(ids)).Do(); err != nil {
+							log.Print(err)
+						}
 					}
 				}
 			}
