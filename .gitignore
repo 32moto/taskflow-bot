@@ -1,0 +1,14 @@
+.DS_Store
+.idea
+.env
+/tmp
+
+# Docker
+docker-compose.yml
+Dockerfile.devlopment
+
+# Go modules
+go.sum
+
+# air
+.air.toml
